@@ -1,0 +1,172 @@
+
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>ChrypnoToads Preview 🐸</title>
+                <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+                <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@1.68.0/lib/index.iife.min.js"></script>
+                <style>
+                    @keyframes float {
+                        0% { transform: translateY(0px); }
+                        50% { transform: translateY(-20px); }
+                        100% { transform: translateY(0px); }
+                    }
+                    .floating { animation: float 3s ease-in-out infinite; }
+                    .money-rain {
+                        position: absolute;
+                        top: -100px;
+                        animation: fall linear infinite;
+                    }
+                    @keyframes fall {
+                        to { transform: translateY(100vh); }
+                    }
+                </style>
+            </head>
+            <body class="bg-gradient-to-br from-green-900 via-green-800 to-green-900 min-h-screen">
+                <!-- Preview Banner -->
+                <div class="bg-yellow-500 text-black text-center py-2 px-4 sticky top-0 z-50">
+                    🚧 Preview Mode - No Blockchain Integration 🚧
+                </div>
+
+                <div id="money-rain"></div>
+
+                <div class="container mx-auto px-4 py-8">
+                    <div class="max-w-4xl mx-auto bg-black bg-opacity-50 rounded-xl p-8 backdrop-filter backdrop-blur-lg">
+                        <div class="text-center mb-8">
+                            <h1 class="text-6xl font-bold text-green-400 mb-4">ChrypnoToads 🐸</h1>
+                            <p class="text-xl text-green-200 mb-4 whitespace-pre-line">
+                                
+    🐸 ChrypnoToads - The Official NFT Collection by ChrypnoToad
+    
+    • Money Rain Toads
+    • 4.20% Total Royalties
+    • 1.51% Goes to Minter!
+    • Part of the $TOAD ecosystem
+    
+    When toads make it rain, collectors profit.
+    
+                            </p>
+                            <p class="text-lg text-yellow-400 mb-4">
+                                Preview Mode - 69 Toads Ready
+                            </p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                                <div class="bg-green-900 bg-opacity-50 rounded-lg p-6">
+                                    <h3 class="text-2xl font-bold text-green-400 mb-2">Mint Price</h3>
+                                    <p class="text-4xl font-bold text-white">0.069 SOL</p>
+                                </div>
+                                <div class="bg-green-900 bg-opacity-50 rounded-lg p-6">
+                                    <h3 class="text-2xl font-bold text-green-400 mb-2">Supply</h3>
+                                    <p class="text-4xl font-bold text-white">69 Toads</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-green-900 bg-opacity-50 rounded-lg p-6 mb-8">
+                                <h3 class="text-2xl font-bold text-green-400 mb-4">Royalty Preview</h3>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <p class="text-xl text-white mb-2">Creator</p>
+                                        <p class="text-3xl font-bold text-green-400">2.69%</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-xl text-white mb-2">Minter</p>
+                                        <p class="text-3xl font-bold text-green-400">1.51%</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="bg-yellow-500 text-black font-bold py-4 px-8 rounded-full text-xl 
+                                        transition-all transform hover:scale-105 floating">
+                                Preview Mode - Minting Disabled
+                            </button>
+
+                            <div class="flex justify-center space-x-4 mt-8">
+                                <a href="https://magiceden.io/marketplace/chrypnotoads" 
+                                class="text-green-400 hover:text-green-300" target="_blank">
+                                Magic Eden
+                                </a>
+                                <a href="https://twitter.com/ChryptoToad" 
+                                class="text-green-400 hover:text-green-300" target="_blank">
+                                Twitter
+                                </a>
+                                <a href="https://tensor.trade/trade/chrypnotoads" 
+                                class="text-green-400 hover:text-green-300" target="_blank">
+                                Tensor
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Preview Stats -->
+                        <div class="mt-12 bg-black bg-opacity-25 rounded-lg p-6">
+                            <h2 class="text-2xl font-bold text-green-400 mb-4">Collection Preview Stats</h2>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-white">
+                                <div>
+                                    <p class="font-bold">Total Images:</p>
+                                    <p>69</p>
+                                </div>
+                                <div>
+                                    <p class="font-bold">Symbol:</p>
+                                    <p>CHRYPT</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sample Metadata -->
+                        <div class="mt-8">
+                            <h2 class="text-2xl font-bold text-green-400 mb-4">Sample Metadata Preview</h2>
+                            <pre class="bg-black bg-opacity-50 p-4 rounded overflow-auto text-green-200 text-sm">
+                            {
+  "name": "ChrypnoToad #1",
+  "symbol": "CHRYPT",
+  "description": "\n    \ud83d\udc38 ChrypnoToads - The Official NFT Collection by ChrypnoToad\n    \n    \u2022 Money Rain Toads\n    \u2022 4.20% Total Royalties\n    \u2022 1.51% Goes to Minter!\n    \u2022 Part of the $TOAD ecosystem\n    \n    When toads make it rain, collectors profit.\n    ",
+  "image": "sample_uri_0.png",
+  "attributes": [
+    {
+      "trait_type": "Edition",
+      "value": "#1/69"
+    },
+    {
+      "trait_type": "Collection",
+      "value": "ChrypnoToads Genesis"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "sample_uri_0.png",
+        "type": "image/png"
+      }
+    ],
+    "category": "image",
+    "creators": [
+      {
+        "address": "<CREATOR_ADDRESS>",
+        "share": 98.49
+      }
+    ]
+  }
+}
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    // Money rain animation
+                    function createMoneyRain() {
+                        const container = document.getElementById('money-rain');
+                        const money = document.createElement('div');
+                        money.innerHTML = '💵';
+                        money.className = 'money-rain';
+                        money.style.left = Math.random() * 100 + 'vw';
+                        money.style.animationDuration = Math.random() * 3 + 2 + 's';
+                        container.appendChild(money);
+                        setTimeout(() => money.remove(), 5000);
+                    }
+                    setInterval(createMoneyRain, 100);
+                </script>
+            </body>
+            </html>
+            
